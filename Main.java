@@ -14,6 +14,12 @@ public class Main {
         // this is Type Car from other class, with variable called car.
         Car car = new Car();
 
+        // using a setter to change the make.
+        car.setMake("Porsche");
+        car.setColour("Blue");
+        car.setModel("Taycan");
+        car.setDoors(5);
+
         // refers to describeCar method
         car.describeCar();
 
@@ -23,5 +29,12 @@ public class Main {
         System.out.println("make = " + car.getMake());
         System.out.println("model = " + car.getModel());
 
+
+        Car targa = new Car();
+        targa.setMake("Porsche");
+        targa.setModel("GTS");
+        targa.setColour("Blue");
+
+        targa.describeCar();
     }
 }
