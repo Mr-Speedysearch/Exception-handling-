@@ -1,21 +1,27 @@
+import com.sun.jdi.Mirror;
+
 public class Main {
+
+// access modifiers are top level when defined in the src and not in the code block.
+// top level access modifiers are either Public or None (blank)
+
+// Access modifiers for Classes: Public, Protected, None and Private
+//we'd use Private for encapsulation - this hides the way the method works.
+
     public static void main(String[] args) {
 
-        // create a method that takes any animal object and executes its 3 methods.
+      // define new variable
+        // this is Type Car from other class, with variable called car.
+        Car car = new Car();
 
-        // create instance
-        Animal animal = new Animal("Generic Animal", "Huge", 400);
-        doAnimalStuff(animal, "slow");
+        // refers to describeCar method
+        car.describeCar();
 
-        // create dog instance
-        Dog dog = new Dog();
-        doAnimalStuff(dog, "fast");
-    }
+//        to access the private fields we can use getters and setters.
+//        Getters retrieves values and returns in, setters set the value of a private field.
 
-    public static void doAnimalStuff(Animal animal, String speed) {
-        animal.makeNoise();
-        animal.move(speed);
-        System.out.println(animal);
+        System.out.println("make = " + car.getMake());
+        System.out.println("model = " + car.getModel());
 
     }
 }
